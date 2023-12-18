@@ -120,10 +120,167 @@ $fa-font-path: "../webfonts" !default;
     width: 18%;
     margin-top: -30px ;
     margin-left: 5%;
-    position: absolute;
     color: white;
     text-transform: uppercase;
     font-size: 1.3em;
     font-weight: 800;
     background-color: #0282f9;
+}
+#buy-comics{
+    background-color: $blue_primary;
+    height: 20vh;
+
+
+      .icon{
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+      }
+
+      .fw-light{
+          font-size: 1.2em;
+      }
+
+}
+footer{
+    .bg-top-footer{
+        background-image: url('../img/footer-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 43vh;
+        color: white;
+        overflow: hidden;
+    }
+
+    .bg-bot-footer{
+        background-color: #303030;
+        height:15vh;
+    }
+    .my-logo-w{
+        width: 450px;
+        top: 50%;
+    }
+    ul li{
+        list-style: none;
+        font-weight: 300;
+        font-size: 0.7em;
+        color:rgb(172, 169, 169) ;
+        font-family: 'Open Sans', sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+
+        &:hover{
+        text-decoration: underline;
+        color: inherit;
+    }
+    }
+
+    span{
+        text-transform: uppercase;
+        font-weight: 700;
+       padding-bottom: 10px;
+    }
+
+    .glow-on-hover {
+        width: 140px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background:transparent;
+        border: 2px solid $blue_primary;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        border: 2px solid $blue_primary;
+        transition: opacity .3s ease-in-out;
+
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:#303030;
+        left: 0;
+        top: 0;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    @media screen and (max-width: 768px) {
+      .bg-top-footer {
+        height: fit-content;
+      }
+      .my-logo-w {
+        width: 300px;
+      }
+      ul li {
+        font-size: 0.6em;
+      }
+      .glow-on-hover {
+        width: 120px;
+        height: 40px;
+      }
+      .bg-bot-footer{
+        background-color: #303030;
+        height:fit-content;
+    }
+    }
+
+
+    @media screen and (max-width: 576px) {
+      .bg-top-footer {
+        height: 80vh;
+      }
+      .my-logo-w {
+        width: 200px;
+      }
+      ul li {
+        font-size: 0.5em;
+      }
+      .glow-on-hover {
+        width: 100px;
+        height: 30px;
+        font-size: 0.8em;
+      }
+      span img{
+        width: 20px;
+      }
+    }
 }
