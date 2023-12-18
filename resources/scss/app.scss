@@ -284,3 +284,20 @@ footer{
       }
     }
 }
+#green-table{
+    background-color: #55ba59;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    .subtitle{
+        color:#91ee94 ;
+    }
+}
+.img-comic{
+    height: 10vh;
+    img{
+        margin-left: 10%;
+        margin-top: -250px;
+        border: 2px solid white;
+    }
+}

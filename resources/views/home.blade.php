@@ -10,10 +10,10 @@
     <div class="row py-5">
         @foreach ( $comics as $comic )
              <div class="col-12 col-md-4 col-lg-2 mt-2">
-            <div class="card border-0 bg-trasparent text-light ">
+            <a href="/comic" class="card border-0 bg-trasparent text-light text-decoration-none  ">
                 <img src="{{ $comic['thumb']}}" alt="{{$comic['title'] }}">
                 <h5>{{$comic['title']}}</h5>
-            </div>
+            </a>
          </div>
         @endforeach
 
