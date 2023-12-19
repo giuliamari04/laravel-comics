@@ -7,10 +7,10 @@
     <div class=" text-center py-2 my-tag position-absolute " >current series</div>
 <div  id="card-content" >
    <div class="container" >
-    <div class="row py-5">
-        @foreach ( $comics as $comic )
+    <div class="row d-flex flex-nowrap overflow-x-auto  py-4">
+        @foreach ( $comics as $key => $comic )
              <div class="col-12 col-md-4 col-lg-2 mt-2">
-            <a href="/comic" class="card border-0 bg-trasparent text-light text-decoration-none  ">
+            <a href="{{route('comics.show', $key)}}" class="card border-0 bg-trasparent text-light text-decoration-none  ">
                 <img src="{{ $comic['thumb']}}" alt="{{$comic['title'] }}">
                 <h5>{{$comic['title']}}</h5>
             </a>
@@ -19,7 +19,7 @@
 
     </div>
    </div>
-   <div class="text-center">
+   <div class="text-center py-5">
 <button class=" text-center my-tag py-2 border-0 mb-3" >load more</button>
    </div>
 

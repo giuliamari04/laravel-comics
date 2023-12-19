@@ -78,3 +78,7 @@ Create poi una rotta per visualizzare la lista di tutti i fumetti recuperati da 
 
 Bonus:
 Create più pagine istituzionali che condividono lo stesso layout (utilizzando il routing)
+
+Terminate l'esercizio di ieri aggiungendo la rotta e il template per il dettaglio del fumetto
+Bonus:
+Create le rotte le pagine (index e show) per un'altra entità a vostro piacere

@@ -7,9 +7,14 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav text-uppercase fw-semibold">
-                    <a class="nav-link" href="#">caracters</a>
 
-                    <a class="nav-link" href="#">comics</a>
+                    <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
+                    href="{{ route('home') }}">home</a>
+
+                    <a class="nav-link {{ Route::currentRouteName() == 'comics.index' ? 'active' : '' }}"
+                    href="{{ route('comics.index') }}">comics</a>
+
+                    <a class="nav-link" href="#">caracters</a>
 
                     <a class="nav-link" href="#">movies</a>
 
@@ -22,9 +27,6 @@
 
 
                     <a class="nav-link" href="#">videos</a>
-
-
-                    <a class="nav-link" href="#">fans</a>
 
 
                     <a class="nav-link" href="#">fans</a>
